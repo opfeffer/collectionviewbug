@@ -8,7 +8,7 @@
 
 #import "CVBViewController.h"
 
-@interface CVBViewController () <UICollectionViewDataSource>
+@interface CVBViewController () <UICollectionViewDataSource,UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView2;
@@ -23,7 +23,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
-        [self.collectionView2 registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+    [self.collectionView2 registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,6 +44,5 @@
     
     return cell;
 }
-
 
 @end
